@@ -20,5 +20,5 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: docker build -t ghcr.io/mawathilde/ws-runner:latest .
-      - run: docker push ghcr.io/mawathilde/ws-runner:latest
+      - run: docker build -t ghcr.io/${{ github.repository }}:latest .
+      - run: docker push ghcr.io/${{ github.repository }}:latest
